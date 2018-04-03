@@ -1,0 +1,82 @@
+.headerToDo {
+  background: #333 !important;
+  overflow: auto;
+}
+.header>span {
+  margin-left: 1em;
+  font-weight: 400;
+  font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+}
+.HeadButtons {
+  float: right; 
+}
+.register {
+  display: 'flex' !important;
+  margin: auto !important;
+}
+#spinner {
+  display: flex;
+  margin: auto;
+}
+#root {
+  max-width: 50em;
+  display: flex;
+  margin: auto;
+}
+#add, #filter {
+  padding: 1em;
+  padding-top: 0.2em;
+  background: #333;
+}
+#add {
+  padding-bottom: 0.1em;
+  border-radius: 5px 5px 0 0;
+}
+#filter {
+  padding-top: 0.1em;
+  border-radius: 0 0 5px 5px;
+}
+#completed {
+  margin: 1em;
+  margin-top: 0.7em;
+}
+#modal {
+  display: inline-block;
+  width: 50em;
+  background: #333;
+  padding: 1em;
+  border-radius: 5px;
+}
+.up, .down {
+  display: block;
+}
+.up {
+  vertical-align: bottom;
+}
+.down {
+  vertical-align: top;
+}
+.theadCell {
+  padding-top: 0 !important;
+  padding-bottom: 0.4em !important;
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+.thead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.message {
+  position: absolute !important;
+  margin: 0 !important;
+  box-sizing: border-box;
+  z-index: 1;
+  word-wrap: break-word;
+}
+.white {
+  text-align: left !important;
+  color: #fff;
+}
