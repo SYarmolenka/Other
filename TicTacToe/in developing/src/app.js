@@ -7,8 +7,11 @@ import ModalPlayerAI from './components/modals/modalPlayerAI';
 import GameOver from './components/modals/gameOver';
 import ModalPlPl from './components/modals/modalP&P';
 import firebase from 'firebase';
+import Register from './components/modals/modalRegister';
+import {change as setUser} from './actions/register';
+import {connect} from 'react-redux';
 
-export default class App extends Component {
+class App extends Component {
   constructor (props) {
     super(props);
     const config = {
@@ -20,8 +23,10 @@ export default class App extends Component {
       messagingSenderId: "477675755906"
     };
     firebase.initializeApp(config);
+    firebase.auth().signOut();
+    firebase.auth().onAuthStateChanged(user => this.props.setUser('user', user));
   };
-  render() {
+  render () {
     return (
       <div>
         <Route exact path='/' component={MainMenu} />
@@ -30,7 +35,10 @@ export default class App extends Component {
         <Route path='/modalpa' component={ModalPlayerAI} />
         <Route path='/over' component={GameOver} />
         <Route path='/modalpp' component={ModalPlPl} />
+        <Route path='/modalreg' component={Register} />
       </div>
     );
   };
 };
+
+export default connect(_ => ({}), {setUser})(App);
